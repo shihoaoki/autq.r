@@ -1,8 +1,9 @@
 version: '3'
-
 services:
   autqr:
     container_name: autqr
-    build: .
-    volumes: 
-      - ./:/usr/src/
+    build:
+      context: ./
+    tty: true
+    volumes:
+      - .:/work/autqr
