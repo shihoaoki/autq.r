@@ -1,4 +1,6 @@
 library("tidyverse")
 
-test <- read_csv("/work/autqr/data/20topics3runs.mat.csv")
-print(test)
+mat <- read_csv("/work/autqr/data/20topics3runs.mat.csv")
+
+t.test(mat$System1, mat$System3, paired=TRUE) %>%
+print()
